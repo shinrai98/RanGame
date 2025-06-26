@@ -1,4 +1,3 @@
-
 window.CharacterName = function(){
 
     CharacterStats.Name = document.getElementById("NameInput").value.trim();
