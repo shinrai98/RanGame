@@ -55,5 +55,38 @@ function GameStart(){
     document.querySelectorAll(".showAtk").forEach(el => el.textContent = CharacterStats.Atk);
     document.querySelectorAll(".showDef").forEach(el => el.textContent = CharacterStats.Def);
 
-}
+    RName = Math.floor(Math.random() * (3 -1 + 1 ) + 1);
+    RGif = Math.floor(Math.random() * (3 -1 + 1 ) + 1);
+    EnemyStats.HP = Math.floor(Math.random() * (10 - 5 + 1 ) + 5);
+    EnemyStats.Atk = Math.floor(Math.random() * (5 -1 + 1 ) + 1);
+    EnemyStats.Def = Math.floor(Math.random() * (5 -1 + 1 ) + 1);
 
+    switch (RName){
+        case 1 :
+            EnemyStats.Name = "Sasuke";
+            break;
+        case 2 :
+            EnemyStats.Name = "Naruto";
+            break;
+        case 3:
+            EnemyStats.Name = "Obito";
+            break;
+    }
+
+    switch (RGif){
+        case 1:
+            document.getElementById("RanGif").src = "gif/monster1.gif";
+            break;
+        case 2:
+            document.getElementById("RanGif").src = "gif/monster2.gif";
+            break;
+        case 3:
+            document.getElementById("RanGif").src = "gif/monster3.gif";
+            break;
+    }
+
+    document.querySelectorAll(".showEName").forEach(el => el.textContent = EnemyStats.Name);
+    document.querySelectorAll(".showEHP").forEach(el => el.textContent = EnemyStats.HP);
+    document.querySelectorAll(".showEAtk").forEach(el => el.textContent = EnemyStats.Atk);
+    document.querySelectorAll(".showEDef").forEach(el => el.textContent = EnemyStats.Def);
+}
