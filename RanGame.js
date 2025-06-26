@@ -1,5 +1,5 @@
 
-window.function CharacterName(){
+window.CharacterName = function(){
 
     CharacterStats.Name = document.getElementById("NameInput").value.trim();
     if (CharacterStats.Name === ""){
