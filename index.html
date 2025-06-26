@@ -30,26 +30,36 @@
 
         <div id="step1">
             <p>Đây là game phụ thuộc vào may mắn rất nhiều . Nếu bạn may mắn thì có thể vượt qua 1 cách rất dễ dàng . Nhưng nếu bạn đen đuổi thì bạn sẽ phải quay trở lại từ đầu rất nhanh</p>
-            <img class="mx-auto w-25 h-25" src="gif/step1.gif" />
+            <div class="d-flex justify-content-center mb-3">
+                 <img class="w-100 w-md-50 w-lg-25" src="gif/step1.gif" />
+            </div>
             <div class="mb-3">
-                <label class="form-label fs-2 fst-italic" for="NameInput">Tên nhân vật</label>
-                <input type="text" class="form-control w-25 mx-auto" id="NameInput" placeholder="Nhập tên nhân vật">
+                <label class="form-label fs-4 fst-italic" for="NameInput">Tên nhân vật</label>
+                <input type="text" class="form-control w-100 w-md-50 mx-auto" id="NameInput" placeholder="Nhập tên nhân vật">
             </div>
             <button class="btn btn-outline-success shadow-lg rounded" onclick="CharacterName()">Xác nhận</button>
         </div>
 
         <div id="step2" style="display: none;">
-            <img class="pt-3 pb-3 mx-auto w-25" src="gif/step2.gif" />
+            <div class="d-flex justify-content-center mb-3">
+                <img class="w-100 w-md-50 w-lg-25 pt-3 pb-3 " src="gif/step2.gif" />
+            </div>
+
             <p>Xin chào <span class="showName text-danger fs-4 fw-bold"></span></p>
             <p>Tiếp theo , chỉ số của bạn sẽ được ngẫu nhiên !! </p>
-            <button type="button" class="btn btn-outline-danger shadow" onclick="backToStep1()">Quay lại</button>
-            <button type="button" class="btn btn-outline-success shadow" onclick="RanSta()">Go !!</button>
+            <div class="d-flex justify-content-center gap-3">
+                <button type="button" class="btn btn-outline-danger shadow" onclick="backToStep1()">Quay lại</button>
+                <button type="button" class="btn btn-outline-success shadow" onclick="RanSta()">Go !!</button>
+            </div>
         </div>  
 
 
         <div id="step3" style="display: none;">
-            <img class="mx-auto pt-3 pb-3 w-20"  src="gif/step3.gif" />
-            <div class="shadow border rounded d-block mx-auto w-10 mt-3 mb-4 pb-2 pt-2">
+            <div class="d-flex justify-content-center mb-3">
+                <img class="w-100 w-md-25 pt-3 pb-3"  src="gif/step3.gif" />
+            </div>
+
+            <div class="shadow border rounded mx-auto w-100 w-md-50 w-lg-25 mt-3 mb-4 pb-2 pt-2">
                 <span class="showName fs-4 fw-bold" ></span><br>
                 <span class='text-success fw-bold'> HP : </span><span class="showHP"></span><br>
                 <span class='text-danger fw-bold'> Atk : </span><span class="showAtk"></span><br>
@@ -58,14 +68,14 @@
             <button class="btn btn-outline-success shadow border rounded" type="button" onclick="GameStart()">Bắt đầu thôi</button>
         </div>
 
-	<div id="step4" style="display: none;">
+        <div id="step4" style="display: none;">
             <div class="container mt-4">
                 <div class="row justify-content-center align-items-center">
                     <!-- main -->
-                    <div class="col-md-4 text-center">
+                    <div class="col-12 col-md-4 text-center mb-3">
                         <div class = "shadow border rounded mx-auto mt-2 p-2">
-                            <img class="shadow border-2 rounded w-75 mt-3" src="gif/step4-main1.gif" />
-                            <div class="shadow border rounded mx-auto w-25 mt-3 mb-4 pb-2 pt-2">
+                            <img class="shadow border-2 rounded w-100 w-md-75 mt-3" src="gif/step4-main1.gif" />
+                            <div class="shadow border rounded mx-auto w-75 mt-3 mb-4 pb-2 pt-2">
                                 <span class="showName fs-4 fw-bold" ></span><br>
                                 <span class='text-success fw-bold'> HP : </span><span class="showHP"></span><br>
                                 <span class='text-danger fw-bold'> Atk : </span><span class="showAtk"></span><br>
@@ -74,16 +84,17 @@
                         </div>
                     </div>
                     <!--button-->
-                    <div class="col-md-2 text-center">
+                    <div class="col-12 col-md-2 text-center mb-3">
+                        <p>Click vào để bắt đầu giao tranh</p>
                         <button class="btn btn-outline-danger p-0 shadow rounded w-75 aspect-ratio-box" type="button" onclick="Combat()">
                             <img class="w-100 h-100 object-fit-cover border rounded " src="gif/dice1.gif" />
                         </button>
                     </div>
                     <!--Monster-->
-                    <div class="col-md-4 text-center">
+                    <div class="col-12 col-md-4 text-center mb-3">
                         <div class = "shadow border rounded mx-auto mt-2 p-2">
-                            <img class="shadow border-2 rounded w-60 mt-3" id="RanGif" />
-                            <div class="shadow border rounded mx-auto w-25 mt-3 mb-4 pb-2 pt-2">
+                            <img class="shadow border-2 rounded w-100 w-md-60 mt-3" id="RanGif" />
+                            <div class="shadow border rounded mx-auto w-75 mt-3 mb-4 pb-2 pt-2">
                                 <span class="showEName fs-4 fw-bold" ></span><br>
                                 <span class='text-success fw-bold'> HP : </span><span class="showEHP"></span><br>
                                 <span class='text-danger fw-bold'> Atk : </span><span class="showEAtk"></span><br>
