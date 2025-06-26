@@ -58,14 +58,39 @@
             <button class="btn btn-outline-success shadow border rounded" type="button" onclick="GameStart()">Bắt đầu thôi</button>
         </div>
 
-        <div id="step4" style="display: none;">
-            <div class = "shadow border rounded d-block mx-auto w-25 ms-3 mt-2">
-                <img class="shadow border-2 rounded w-75 mt-3" src="gif/step4-main1.gif" />
-                <div class="shadow border rounded d-block mx-auto w-25 mt-3 mb-4 pb-2 pt-2">
-                    <span class="showName fs-4 fw-bold" ></span><br>
-                    <span class='text-success fw-bold'> HP : </span><span class="showHP"></span><br>
-                    <span class='text-danger fw-bold'> Atk : </span><span class="showAtk"></span><br>
-                    <span class='text-primary fw-bold'> Def : </span><span class="showDef"></span>
+	<div id="step4" style="display: none;">
+            <div class="container mt-4">
+                <div class="row justify-content-center align-items-center">
+                    <!-- main -->
+                    <div class="col-md-4 text-center">
+                        <div class = "shadow border rounded mx-auto mt-2 p-2">
+                            <img class="shadow border-2 rounded w-75 mt-3" src="gif/step4-main1.gif" />
+                            <div class="shadow border rounded mx-auto w-25 mt-3 mb-4 pb-2 pt-2">
+                                <span class="showName fs-4 fw-bold" ></span><br>
+                                <span class='text-success fw-bold'> HP : </span><span class="showHP"></span><br>
+                                <span class='text-danger fw-bold'> Atk : </span><span class="showAtk"></span><br>
+                                <span class='text-primary fw-bold'> Def : </span><span class="showDef"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--button-->
+                    <div class="col-md-2 text-center">
+                        <button class="btn btn-outline-danger p-0 shadow rounded w-75 aspect-ratio-box" type="button" onclick="Combat()">
+                            <img class="w-100 h-100 object-fit-cover border rounded " src="gif/dice1.gif" />
+                        </button>
+                    </div>
+                    <!--Monster-->
+                    <div class="col-md-4 text-center">
+                        <div class = "shadow border rounded mx-auto mt-2 p-2">
+                            <img class="shadow border-2 rounded w-60 mt-3" id="RanGif" />
+                            <div class="shadow border rounded mx-auto w-25 mt-3 mb-4 pb-2 pt-2">
+                                <span class="showEName fs-4 fw-bold" ></span><br>
+                                <span class='text-success fw-bold'> HP : </span><span class="showEHP"></span><br>
+                                <span class='text-danger fw-bold'> Atk : </span><span class="showEAtk"></span><br>
+                                <span class='text-primary fw-bold'> Def : </span><span class="showEDef"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
