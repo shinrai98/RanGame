@@ -69,13 +69,14 @@
         </div>
 
         <div id="step4" style="display: none;">
-            <div class="container mt-4">
-                <div class="row flex-nowrap justify-content-center align-items-start overflow-auto">
+        <div id="step4" style="display: none;">
+            <div class="container-fluid mt-4">
+                <div class="d-flex justify-content-center align-items-start flex-wrap gap-3 px-2" style="overflow-x : auto">
                     <!-- main -->
-                    <div class="text-center me-2" style="min-width: 250px;">
-                        <div class = "shadow border rounded mx-auto p-2">
+                    <div class="text-center flex-fill" style="max-width: 280px; min-width: 180px;">
+                        <div class = "shadow border rounded p-2 ">
                             <img class="shadow border-2 rounded w-100 mt-3" src="gif/step4-main1.gif" />
-                            <div class="shadow border rounded mx-auto w-100 mt-3 pb-2 pt-2">
+                            <div class="shadow border rounded mt-3 pb-2 pt-2">
                                 <span class="showName fs-4 fw-bold" ></span><br>
                                 <span class='text-success fw-bold'> HP : </span><span class="showHP"></span><br>
                                 <span class='text-danger fw-bold'> Atk : </span><span class="showAtk"></span><br>
@@ -84,17 +85,17 @@
                         </div>
                     </div>
                     <!--button-->
-                    <div class="text-center me-2" style="min-width: 120px;">
+                    <div class="text-center flex-fill" style="max-width: 180px; min-width: 120px;">
                         <p>Click vào để bắt đầu giao tranh</p>
-                        <button class="btn btn-outline-danger p-0 shadow rounded w-100 aspect-ratio-box " type="button" onclick="Combat()">
+                        <button class="btn btn-outline-danger p-0 shadow rounded w-75 aspect-ratio-box " type="button" onclick="Combat()">
                             <img class="w-100 h-100 object-fit-cover border rounded " src="gif/dice1.gif" />
                         </button>
                     </div>
                     <!--Monster-->
-                    <div class="text-center" style="min-width: 250px;">
-                        <div class = "shadow border rounded mx-auto p-2">
+                    <div class="text-center flex-fill" style="max-width: 280px; min-width: 180px;">
+                        <div class = "shadow border rounded p-2">
                             <img class="shadow border-2 rounded w-100 mt-3" id="RanGif" />
-                            <div class="shadow border rounded mx-auto w-100 mt-3 pb-2 pt-2">
+                            <div class="shadow border rounded mt-3 pb-2 pt-2">
                                 <span class="showEName fs-4 fw-bold" ></span><br>
                                 <span class='text-success fw-bold'> HP : </span><span class="showEHP"></span><br>
                                 <span class='text-danger fw-bold'> Atk : </span><span class="showEAtk"></span><br>
