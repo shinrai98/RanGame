@@ -162,7 +162,7 @@ function EnemyAttack(){
     }
 
     if (CharacterStats.HP <= 0) {
-        document.getElementById("gameOver").src = "gif/gameover1.gif";
+        //document.getElementById("gameOver").src = "gif/gameover1.gif";
         setTimeout(() => alert("💀 Bạn đã thua trận!"), 500);
     }
 }
