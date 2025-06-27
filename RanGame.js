@@ -110,3 +110,59 @@ function GameStart(){
     setBGGif()
 }
 
+//combat
+function Combat(){
+    const yourRoll = Math.floor(Math.random() * 6 + 1);
+    const enemyRoll = Math.floor(Math.random() * 6 + 1);
+    
+    if ( yourRoll > enemyRoll ){
+        document.getElementById("dialogueBox").innerHTML = 
+        `🧍 Bạn roll ra : <b>${yourRoll}</b><br>👾 Kẻ địch roll ra : <b>${enemyRoll}</b><br> Bạn lớn hơn nên bạn được ra đòn`;
+        setTimeout(YourAttack, 2500); // 2.5 giây
+    } else if (yourRoll < enemyRoll){ 
+        document.getElementById("dialogueBox").innerHTML = 
+        `🧍 Bạn roll ra : <b>${yourRoll}</b><br>👾 Kẻ địch roll ra : <b>${enemyRoll}</b><br> Kẻ địch lớn hơn nên kẻ địch được ra đòn`;
+        setTimeout(EnemyAttack, 2500); // 2.5 giây
+    } else {
+        document.getElementById("dialogueBox").innerHTML = " Hãy roll lại !!"
+    }
+
+}
+// Attack
+function YourAttack(){
+    if (CharacterStats.Atk > EnemyStats.Def ){
+        const Damage = CharacterStats.Atk - EnemyStats.Def;
+        EnemyStats.HP -= Damage;
+        document.getElementById("dialogueBox").innerHTML = 
+        "Bạn gây ra <span class = 'text-danger'>" + Damage + " Damge </span> cho địch . Kẻ địch còn <span class='text-success'>" + EnemyStats.HP + " HP </span>";
+        document.querySelectorAll(".showEHP").forEach(el => el.textContent = EnemyStats.HP);
+    } else{
+        EnemyStats.HP -= 1;
+        document.getElementById("dialogueBox").innerHTML =
+        "Bạn gây ra <span class = 'text-danger'> 1 Damage </span> cho địch . Kẻ địch còn <span class='text-success'>" + EnemyStats.HP + " HP </span>";
+        document.querySelectorAll(".showEHP").forEach(el => el.textContent = EnemyStats.HP);
+    }
+
+    if ( CharacterStas.HP <= 0 ){
+        setTimeout(() => alert("🎉 Kẻ địch đã bị hạ! Chúc mừng bạn!"), 500);
+    }
+}
+function EnemyAttack(){
+    if (EnemyStats.Atk > CharacterStats.Def ){
+        const Damage = EnemyStats.Atk - CharacterStats.Def;
+        CharacterStats.HP -= Damage;
+        document.getElementById("dialogueBox").innerHTML =
+        "Kẻ địch gây ra <span class = 'text-danger'>" + Damage + " Damage </span> cho bạn . Bạn còn <span class='text-success'>" + CharacterStats.HP + " HP</span>";
+        document.querySelectorAll(".showHP").forEach(el => el.textContent = CharacterStats.HP);
+    } else{
+        CharacterStats.HP -= 1;
+        document.getElementById("dialogueBox").innerHTML =
+        "Kẻ địch gây ra <span class = 'text-danger'> 1 Damge </span> cho bạn . Bạn còn <span class='text-success'>" + CharacterStats.HP + " HP </span>";
+        document.querySelectorAll(".showHP").forEach(el => el.textContent = CharacterStats.HP);
+    }
+
+    if (CharacterStats.HP <= 0) {
+        document.getElementById("gameOver").src = "gif/gameover1.gif";
+        setTimeout(() => alert("💀 Bạn đã thua trận!"), 500);
+    }
+}
