@@ -13,3 +13,9 @@
 .mt-6{
     margin-top: 6rem;
 }
+.me-6{
+    margin-inline-end : 10rem;
+}
+.ms-6{
+    margin-inline-start : 10rem;
+}
