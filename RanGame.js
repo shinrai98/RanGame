@@ -143,7 +143,7 @@ function YourAttack(){
         document.querySelectorAll(".showEHP").forEach(el => el.textContent = EnemyStats.HP);
     }
 
-    if ( EnemyStas.HP <= 0 ){
+    if ( EnemyStats.HP <= 0 ){
         setTimeout(() => alert("🎉 Kẻ địch đã bị hạ! Chúc mừng bạn!"), 500);
     }
 }
