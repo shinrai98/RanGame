@@ -65,37 +65,39 @@
             <button class="btn btn-outline-success shadow border rounded" type="button" onclick="GameStart()">Bắt đầu thôi</button>
         </div>
         <!--step4-->
-        <div id="step4" style="display: none;">
-            <div class="container-fluid mt-3">
-                <div class="d-flex justify-content-center align-items-start flex-wrap gap-2 px-2" style="overflow-x : auto">
-                    <!-- main -->
-                    <div class="text-center flex-fill" style="max-width: 240px; min-width: 160px;">
-                        <div class = "shadow border rounded p-2 ">
-                            <img class="rounded w-100" src="gif/step4-main1.gif" style="max-height: 120px; object-fit: contain;"/>
-                            <div class="shadow border rounded mt-2 py-1 small">
-                                <span class="showName fs-4 fw-bold" ></span><br>
-                                <span class='text-success fw-bold'> HP : </span><span class="showHP"></span><br>
-                                <span class='text-danger fw-bold'> Atk : </span><span class="showAtk"></span><br>
-                                <span class='text-primary fw-bold'> Def : </span><span class="showDef"></span>
+        <div id="step4" class="h-75" style="display: none;">
+            <div id="BG">
+                <div class="container-fluid mt-3">
+                    <div class="d-flex justify-content-center align-items-start flex-wrap gap-2 px-2" style="overflow-x : auto">
+                        <!-- main -->
+                        <div class="text-center flex-fill mt-5 mb-5" style="max-width: 240px; min-width: 160px; background-color: whitesmoke;">
+                            <div class = "shadow border rounded p-2 ">
+                                <img class="rounded w-100" style="max-height: 120px; object-fit: contain;" id = "MainCharGif" src=""/>
+                                <div class="shadow border rounded mt-2 py-1 small">
+                                    <span class="showName fs-4 fw-bold" ></span><br>
+                                    <span class='text-success fw-bold'> HP : </span><span class="showHP"></span><br>
+                                    <span class='text-danger fw-bold'> Atk : </span><span class="showAtk"></span><br>
+                                    <span class='text-primary fw-bold'> Def : </span><span class="showDef"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!--button-->
-                    <div class="text-center flex-fill" style="max-width: 120px; min-width: 90px;">
-                        <p class="small mb-1">Click vào để bắt đầu giao tranh</p>
-                        <button class="btn btn-outline-danger p-0 shadow rounded w-75 aspect-ratio-box " type="button" onclick="Combat()">
-                            <img class="w-75 h-75 object-fit-cover " src="gif/dice1.gif" />
-                        </button>
-                    </div>
-                    <!--Monster-->
-                    <div class="text-center flex-fill" style="max-width: 240px; min-width: 160px;">
-                        <div class = "shadow border rounded p-2">
-                            <img class="rounded w-100" id="RanGif" style="max-height: 120px; object-fit: contain;"/>
-                            <div class="shadow border rounded mt-2 py-1 small">
-                                <span class="showEName fs-4 fw-bold" ></span><br>
-                                <span class='text-success fw-bold'> HP : </span><span class="showEHP"></span><br>
-                                <span class='text-danger fw-bold'> Atk : </span><span class="showEAtk"></span><br>
-                                <span class='text-primary fw-bold'> Def : </span><span class="showEDef"></span>
+                        <!--button-->
+                        <div class="text-center flex-fill mt-6 border rounded-3" style="max-width: 120px; min-width: 90px; background-color: whitesmoke;">
+                            <p class="small mb-1">Click vào để bắt đầu giao tranh</p>
+                            <button class="btn btn-outline-danger p-0 shadow rounded w-75 aspect-ratio-box mb-3" type="button" onclick="Combat()">
+                                <img class="w-75 h-75 object-fit-cover " src="gif/dice1.gif" />
+                            </button>
+                        </div>
+                        <!--Monster-->
+                        <div class="text-center flex-fill mt-5 mb-5 " style="max-width: 240px; min-width: 160px; background-color: whitesmoke; ">
+                            <div class = "shadow border rounded p-2">
+                                <img class="rounded w-100" style="max-height: 120px; object-fit: contain;" id="EnemyGif" src=""/>
+                                <div class="shadow border rounded mt-2 py-1 small">
+                                    <span class="showEName fs-4 fw-bold" ></span><br>
+                                    <span class='text-success fw-bold'> HP : </span><span class="showEHP"></span><br>
+                                    <span class='text-danger fw-bold'> Atk : </span><span class="showEAtk"></span><br>
+                                    <span class='text-primary fw-bold'> Def : </span><span class="showEDef"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
